@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Hero() {
-  AOS.init({ duration: 800 });
+  AOS.init({ duration: 500 });
 
   return (
     <>

@@ -1,9 +1,10 @@
 import React from "react";
+import Skills from "../Skills/Skills";
 
 function App() {
   return (
     <>
-      <div className="">
+      <div className="navPosition">
         <div className="navbar">
           <div className="logo">
             <svg
@@ -55,7 +56,7 @@ function App() {
             <h1>Portfolio</h1>
           </div>
           <div className="link flex-center">
-            <a className="tab" href="">
+            <a className="tab" href={Skills}>
               About me
             </a>
             <a className="tab" href="">

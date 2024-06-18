@@ -9,6 +9,7 @@
   --border-secondary: #101530;
   --primary: #52c234;
   --primary-accent: #03a003;
+  --transition: all 0.4s ease;
   --gradient-2: linear-gradient(to right, var(--primary) 0%, #e1e3e1 100%);
 }
 
@@ -104,13 +105,14 @@ a:hover {
 
 /* whole navbar styling */
 .navbar {
+  position: sticky;
   display: flex;
   padding: 10px 20px;
   justify-content: space-between;
-  border-bottom: 0.5px solid var(--primary);
+  border-bottom: 0.5px solid var(--bg-muted);
   width: 100%;
   z-index: 100;
-  top: 0;
+  top: 0px;
   left: 0;
 }
 
@@ -129,9 +131,15 @@ a:hover {
   margin-top: 40px;
 }
 
-.heroText h1 {
+.hero h1 {
   font-size: 37px;
   font-weight: 900;
+}
+
+.headingText {
+  font-size: 37px;
+  font-weight: 900;
+  text-align: center;
 }
 
 .primary {
@@ -207,4 +215,66 @@ p {
   width: 100%;
   background: var(--bg-secondary);
   backdrop-filter: blur(100px);
+}
+
+/* ABOUT section WORIKINGS */
+.sub-title {
+  font-size: 20px;
+  text-align: center;
+}
+
+.group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+  background: var(--bg-accent);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.grid-item {
+  width: 100%;
+  background: var(--bg-secondary);
+  padding: 30px;
+  justify-content: flex-start;
+  border-radius: 10px;
+  border: solid 0.5px var(--border-primary);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.grid-item:hover {
+  background: var(--bg-accent);
+  scale: 300px;
+  transition: var(--transition);
+}
+
+.title {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.section-header {
+  margin: auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Customising My Skills Section */
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  border: 1px solid transparent;
+  background: var(--bg-accent);
+  border-radius: 10px;
+  padding: 30px 40px;
+  transition: all ease-in-out 0.5s;
+  cursor: pointer;
 }
