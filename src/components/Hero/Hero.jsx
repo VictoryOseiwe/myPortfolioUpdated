@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/victory-g4bLclXzl-transformed.png";
+import img from "../../assets/vic.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
