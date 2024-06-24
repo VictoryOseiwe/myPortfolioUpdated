@@ -22,6 +22,7 @@ body {
   scrollbar-color: var(--primary) transparent;
   background: var(--bg-primary);
   color: var(--muted-foreground);
+  /* background-image: url("./assets/asfalt-light.png"); */
 }
 
 .logo {
@@ -107,10 +108,10 @@ a:hover {
 
 /* whole navbar styling */
 .navbar {
-  position: sticky;
   display: flex;
   padding: 10px 20px;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 0.5px solid var(--bg-muted);
   width: 100%;
   z-index: 100;
@@ -368,4 +369,100 @@ p {
   transform: scale(1.2);
   color: var(--primary);
   transition: all ease-in-out 0.5s;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+/* STYLING FOR MOBILE */
+@media (max-width: 768px) {
+  .mobileMenu {
+    display: block;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .group {
+    grid-template-columns: 1fr;
+  }
+
+  .tab {
+    flex-direction: column;
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    background: var(--bg-muted);
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .handlesContainer {
+    display: none;
+  }
+
+  .flex-center > .btn {
+    display: none;
+  }
+  .flex-center {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .wrapper {
+    padding: 40px 20px;
+  }
+
+  #hero .info-container {
+    grid-template-columns: 100%;
+  }
+
+  #hero .info-container * {
+    text-align: center;
+  }
+
+  #hero .achievement-cluster .wrapper {
+    padding: 30px 20px;
+  }
+
+  .skill-container {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 20px; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact .wrapper {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; */
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom {
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .bottom .flex {
+    text-align: center;
+  }
+
+  #hero .info-container .buttons-wrapper {
+    justify-content: center;
+  }
 }

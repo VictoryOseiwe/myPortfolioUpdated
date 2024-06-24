@@ -12,7 +12,7 @@ function Footer() {
     <>
       <div id="footer">
         <div className="footer">
-          <div className="bottom wrapper">
+          <div className="bottom wrapper" data-aos="fade-right">
             <div className="footLogo">
               <div className="logo">
                 <img src={logo} alt="logo" />

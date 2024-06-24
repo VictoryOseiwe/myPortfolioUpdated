@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Skills from "../Skills/Skills";
 import logo from "../../assets/logo.svg";
 import Icon from "../Icon";
@@ -6,8 +6,17 @@ import Ig from "../../assets/ig.svg";
 import Fb from "../../assets/fb.svg";
 import X from "../../assets/x.svg";
 import Yt from "../../assets/yt.svg";
+import { LuMenu } from "react-icons/lu";
+import { BiMenuAltRight } from "react-icons/bi";
 
 function Header() {
+  const [menuOpened, setMenuOpened] = useState(false);
+
+  function handleMobileMenu() {
+    console.log(menuOpened);
+    return setMenuOpened(!menuOpened);
+  }
+
   return (
     <>
       <div className="navPosition">
@@ -16,22 +25,15 @@ function Header() {
             <img src={logo} alt="logo" />
             <h1>Portfolio</h1>
           </div>
-          <div className="link flex-center">
-            <a className="tab" href={Skills}>
-              About me
-            </a>
-            <a className="tab" href="">
-              Skills
-            </a>
-            <a className="tab" href="">
-              Services
-            </a>
-            <a className="tab" href="">
-              Projects
-            </a>
-            <a className="tab" href="">
-              Testimonials
-            </a>
+          <div className="link tab flex-center">
+            <a href="">About me</a>
+            <a href="">Skills</a>
+            <a href="">Services</a>
+            <a href="">Projects</a>
+            <a href="">Testimonials</a>
+          </div>
+          <div onClick={handleMobileMenu} className="mobileMenu">
+            <LuMenu size={30} />
           </div>
           <div className="handlesContainer">
             <Icon img={Ig} />
